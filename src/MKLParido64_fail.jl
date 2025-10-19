@@ -5,7 +5,9 @@ Pkg.instantiate()
 using MKL
 using LinearAlgebra
 using SparseArrays
-using Pardiso # from my branch forcing MklInt = Int64
+# Load my branch of Pardiso that forces MklInt = Int64
+# https://github.com/briochemc/Pardiso.jl/tree/MKL_force_Int64
+using Pardiso
 
 ps = MKLPardisoSolver()
 
