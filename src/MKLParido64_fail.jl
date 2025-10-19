@@ -9,6 +9,11 @@ using SparseArrays
 # https://github.com/briochemc/Pardiso.jl/tree/MKL_force_Int64
 using Pardiso
 
+@show LinearAlgebra.BlasInt
+@show Pardiso.MklInt
+@show Pardiso.PARDISO_FUNC
+@show Base.USE_BLAS64
+
 ps = MKLPardisoSolver()
 
 A = sparse(rand(10, 10))
